@@ -1,0 +1,21 @@
+.header {
+  background: rgb(156, 23, 23);
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.nav a.active {
+  color: var(--color-primary);
+}

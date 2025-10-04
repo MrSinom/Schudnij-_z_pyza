@@ -1,0 +1,48 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  line-height: 1.6;
+}
+
+/* Nagłówki */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 20px;
+}
+
+/* Kontener */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Sekcje */
+section {
+  padding: var(--spacing-section) 0;
+}
+
+/* Przyciski */
+.btn {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--color-secondary);
+}

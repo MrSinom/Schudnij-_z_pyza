@@ -1,0 +1,8 @@
+.container {
+  background: rgb(255, 255, 255);
+  border: 4px solid rgb(199, 178, 153); /* ✅ poprawione */
+  padding: 20px;
+  color: rgb(199, 178, 153);
+  text-decoration-color: rgb(199, 178, 153);
+  margin: 10px;
+}

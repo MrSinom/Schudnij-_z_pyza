@@ -1,7 +1,10 @@
 .header {
-  background: rgb(156, 23, 23);
-  border-bottom: 1px solid #eee;
-  padding: 20px 0;
+  background: rgb(255, 255, 255);
+  border: 4px, solid rgb(199, 178, 153);
+  padding: 20px;
+  color: rgb(199, 178, 153);
+  text-decoration-color: rgb(199, 178, 153);
+  margin:10px;
 }
 
 .nav {
@@ -12,8 +15,6 @@
 
 .nav a {
   text-decoration: none;
-  color: var(--color-dark);
-  font-weight: 600;
 }
 
 .nav a.active {

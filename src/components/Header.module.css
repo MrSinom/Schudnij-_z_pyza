@@ -1,22 +1,153 @@
 .header {
-  background: rgb(255, 255, 255);
-  border: 4px, solid rgb(199, 178, 153);
-  padding: 20px;
-  color: rgb(199, 178, 153);
-  text-decoration-color: rgb(199, 178, 153);
-  margin:10px;
+  background-color: #eaf3ec;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #5c4b3b;
 }
 
-.nav {
+.navbar {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
-.nav a {
+.logo img {
+  height: 150px;
+  width: auto;
+  display: block;
+}
+
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLinks a {
+  
+  text-decoration: none;
+  color: #5c4b3b;
+  font-weight: 500;
+}
+
+.login {
+  background-color: transparent;
+  border: 2px solid #c7b299;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: #5c4b3b;
   text-decoration: none;
 }
 
-.nav a.active {
-  color: var(--color-primary);
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #5c4b3b;
+  border-radius: 2px;
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.text p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.primary,
+.secondary {
+  text-decoration: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.primary {
+  background-color: #c7b299;
+  color: white;
+}
+
+.secondary {
+  background-color: transparent;
+  border: 2px solid #c7b299;
+  color: #5c4b3b;
+}
+
+/* Obraz po prawej */
+.image {
+  flex: 1;
+  min-height: 300px;
+  background-image: url("/images/yoga-pose.jpg"); /* ← dodaj swój obrazek do folderu public */
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    margin-top:20px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #eaf3ec;
+    padding: 1rem;
+    border-top: 2px solid #c7b299;
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .login{
+    display: none;
+  }
 }

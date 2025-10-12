@@ -3,13 +3,13 @@
   border: 2px solid #c7b299;
   border-radius: 16px;
   padding: 3rem 2rem;
-  margin: 2rem auto;
+  margin: 50px;
   max-width: 900px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
+  text-align: center;
   transition: transform 0.4s ease;
 }
 
@@ -18,23 +18,45 @@
 }
 
 .container h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #5c4b3b;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .container p {
   font-size: 1.1rem;
   color: #6f5e4d;
-  margin-bottom: 1.5rem;
-  max-width: 700px;
+  margin-bottom: 1.2rem;
+  max-width: 750px;
+  line-height: 1.6;
+}
+
+.container strong {
+  color: #5c4b3b;
 }
 
 .container ul {
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+  max-width: 650px;
+}
+
+.container ul li {
+  font-size: 1.05rem;
+  color: #5c4b3b;
+  margin-bottom: 0.8rem;
+  position: relative;
   padding-left: 1.2rem;
-  color: #6f5e4d;
+}
+
+.container ul li::before {
+  content: "•";
+  color: #c7b299;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
 }
 
 .viewMore {
@@ -45,7 +67,7 @@
   border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .viewMore:hover {

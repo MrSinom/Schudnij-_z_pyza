@@ -1,57 +1,66 @@
 .container {
-   background: rgb(255, 255, 255);
-  border: 4px solid rgb(199, 178, 153); /* ✅ poprawione */
-  padding: 20px;
-  color: rgb(199, 178, 153);
-  text-decoration-color: rgb(199, 178, 153);
-  margin: 10px;
+  background-color: #f4f9f5;
+  border: 2px solid #c7b299;
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  margin: 50px;
+  max-width: 900px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.container:hover {
+  transform: translateY(-4px);
 }
 
 .title {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  color: #5c4b3b;
   margin-bottom: 1rem;
-  color: #a68b6d;
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: #6f5e4d;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
   line-height: 1.6;
-  margin-bottom: 1rem;
 }
 
 .list {
   list-style: none;
-  padding-left: 0;
-  margin-bottom: 1rem;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+  max-width: 600px;
 }
 
 .list li {
-  margin-bottom: 0.5rem;
-  padding-left: 1.2rem;
-  position: relative;
-}
-
-.list li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #c7b299;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
+  color: #5c4b3b;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
 }
 
 .note {
-  font-style: italic;
-  margin-bottom: 1.5rem;
-  color: #7a6650;
+  font-size: 1rem;
+  color: #6f5e4d;
+  margin: 1.5rem 0;
+  max-width: 650px;
+  line-height: 1.5;
 }
 
 .button {
-  display: inline-block;
+  text-decoration: none;
   background-color: #c7b299;
   color: white;
-  padding: 0.8rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
@@ -59,3 +68,4 @@
 .button:hover {
   background-color: #a68b6d;
 }
+

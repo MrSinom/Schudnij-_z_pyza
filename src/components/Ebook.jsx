@@ -2,7 +2,7 @@ import styles from "./Ebook.module.css";
 
 function Ebook() {
   return (
-   <section className={styles.container}>
+    <section className={styles.container}>
       <h2 className={styles.title}>📘 Mój e-book — Twoja droga do zmiany</h2>
       <p className={styles.description}>
         Ten e-book to nie tylko zbiór przepisów i porad — to moja osobista historia, doświadczenie i konkretne narzędzia, które pomogły mi schudnąć z głową. Znajdziesz tu:
@@ -21,4 +21,4 @@ function Ebook() {
   );
 };
 
-export default Ebook
+export default Ebook;

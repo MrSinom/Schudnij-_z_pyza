@@ -57,15 +57,6 @@ function Header() {
         </div>
         <div className={styles.image}></div>
       </div>
-
-      {/* Sekcje landing page */}
-      <main className={styles.sections}>
-        <AboutMe />
-        <Training />
-        <Ebook />
-        <CookingSite />
-        <ContactForm />
-      </main>
     </header>
   );
 }

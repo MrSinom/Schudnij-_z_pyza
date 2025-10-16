@@ -1,15 +1,24 @@
-import { NavLink } from "react-router-dom";
 import styles from "./Footer.module.css";
 
-function Footer() {
+function Footer({ setActiveComponent }) {
   return (
     <footer className={styles.footer}>
       <div className={styles.links}>
-        <NavLink to="/about" className={styles.link}>O mnie</NavLink>
-        <NavLink to="/training" className={styles.link}>Trening</NavLink>
-        <NavLink to="/ebook" className={styles.link}>E-book</NavLink>
-        <NavLink to="/cookingd" className={styles.link}>Kuchnia</NavLink>
-        <NavLink to="/contact" className={styles.link}>Kontakt</NavLink>
+        <span className={styles.link} onMouseEnter={() => setActiveComponent("about")}>
+          O mnie
+        </span>
+        <span className={styles.link} onMouseEnter={() => setActiveComponent("training")}>
+          Trening
+        </span>
+        <span className={styles.link} onMouseEnter={() => setActiveComponent("ebook")}>
+          E-book
+        </span>
+        <span className={styles.link} onMouseEnter={() => setActiveComponent("cooking")}>
+          Kuchnia
+        </span>
+        <span className={styles.link} onMouseEnter={() => setActiveComponent("contact")}>
+          Kontakt
+        </span>
       </div>
       <p className={styles.copy}>
         © {new Date().getFullYear()} Schudnij z Pyzą — Wszystkie prawa zastrzeżone

@@ -20,12 +20,6 @@ function AboutMe({ preview = false }) {
       <p>
         Jeśli chcesz schudnąć z głową, bez wyrzeczeń i z uśmiechem — jesteś w dobrym miejscu. <strong>Schudnij z Pyzą</strong> to nie tylko profil, to społeczność kobiet, które wspierają się nawzajem i pokazują, że zmiana jest możliwa.
       </p>
-
-      {!preview && (
-        <NavLink to="/about" className={styles.viewMore}>
-          Zobacz więcej
-        </NavLink>
-      )}
     </div>
   );
 }

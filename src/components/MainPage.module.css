@@ -1,217 +1,70 @@
-/* === HEADER === */
-.header {
- background-color: #f4f9f5;
-  color: #5c4b3b;
-  padding: 1rem 2rem;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-}
-
-/* === NAVBAR === */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 10;
-}
-
-/* === LOGO === */
-.logo img {
-  height: 200px;
-  width: auto;
-}
-
-/* === HAMBURGER === */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #5c4b3b;
-  transition: all 0.3s ease;
-}
-
-/* === NAVLINKS === */
-.navLinks {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.navLinks a,
-.navLinks span {
-  position: relative;
-  text-decoration: none;
-  color: #5c4b3b;
-  font-weight: 500;
-  padding: 0.25rem 0;
-  transition: color 0.3s ease;
-  cursor: pointer;
-}
-
-.navLinks a::after,
-.navLinks span::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: currentColor;
-  transition: width 0.3s ease, left 0.3s ease;
-}
-
-.navLinks a:hover,
-.navLinks span:hover {
-  color: #a68b6d;
-}
-
-.navLinks a:hover::after,
-.navLinks span:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-/* === LOGIN BUTTON === */
-.primary,
-.secondary,
-.login {
-  position: relative;
-  text-decoration: none;
-  color: #5c4b3b;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  overflow: hidden;
-}
-
-.primary::after,
-.secondary::after,
-.login::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: currentColor;
-  transition: width 0.3s ease, left 0.3s ease;
-}
-
-.primary:hover::after,
-.secondary:hover::after,
-.login:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-/* === HERO SECTION === */
-.hero {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 3rem 2rem;
-  gap: 2rem;
-  flex-wrap: wrap;
- background-color: #f4f9f5;
+.container {
+  background-color: #f4f9f5;
   border-radius: 16px;
-  border: 2px solid rgba(199, 178, 153, 0.4);
+  padding: 3rem 2rem;
+  margin: 50px;
+  max-width: auto;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-}
-
-/* === HERO TEXT === */
-.text {
-  flex: 1;
-  min-width: 280px;
-}
-
-.text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #5c4b3b;
-}
-
-.text p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #6f5e4d;
-  max-width: 500px;
-}
-
-.buttons {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.4s ease;
 }
 
-/* === HERO IMAGE PLACEHOLDER === */
-.image {
-  flex: 1;
-  min-width: 280px;
-  height: 300px;
-  background-color: #eae7e1;
+.container:hover {
+  transform: translateY(-4px);
+}
+
+.title {
+  font-size: 2rem;
+  color: #5c4b3b;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #6f5e4d;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+  max-width: 600px;
+}
+
+.list li {
+  font-size: 1.05rem;
+  color: #5c4b3b;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.note {
+  font-size: 1rem;
+  color: #6f5e4d;
+  margin: 1.5rem 0;
+  max-width: 650px;
+  line-height: 1.5;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #c7b299;
+  color: white;
+  padding: 0.8rem 1.6rem;
   border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-/* === RESPONSYWNOŚĆ === */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .logo img {
-    height: 200px;
-    width: auto;
-  }
-
-  .navLinks {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #f4f9f5;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1rem 0;
-    display: none;
-  }
-
-  .navLinks.open {
-    display: flex;
-  }
-
-  .login {
-    margin-top: 1rem;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text h1 {
-    font-size: 2rem;
-  }
-
-  .text p {
-    font-size: 1rem;
-  }
-
-  .image {
-    height: 200px;
-  }
+.button:hover {
+  background-color: #a68b6d;
 }
+

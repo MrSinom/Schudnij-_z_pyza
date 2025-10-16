@@ -1,14 +1,9 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
-import logo from "../assets/logo_schudnij_example_change_color.svg";
+import logo from "../assets/name_withoutLOGO.svg";
 
 // Importuj komponenty z landing page
-import AboutMe from "./AboutMe";
-import Training from "./Training";
-import Ebook from "./Ebook";
-import CookingSite from "./CookingSite";
-import ContactForm from "./ContactForm";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +13,6 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      {/* Nawigacja */}
       <div className={styles.navbar}>
         <NavLink to="/" className={styles.logo} onClick={closeMenu}>
           <img src={logo} alt="Logo" />
@@ -39,23 +33,8 @@ function Header() {
         </nav>
 
         <NavLink to="/login" className={styles.login} onClick={closeMenu}>
-          Log in
+          Zaloguj
         </NavLink>
-      </div>
-
-      {/* Sekcja promocyjna */}
-      <div className={styles.hero}>
-        <div className={styles.text}>
-          <h1>Transform Your Body and Mind</h1>
-          <p>
-            Join us in transforming your body and mind through our comprehensive yoga and fitness programs.
-          </p>
-          <div className={styles.buttons}>
-            <NavLink to="/join" className={styles.primary}>Join Member</NavLink>
-            <NavLink to="/start" className={styles.secondary}>Start for free</NavLink>
-          </div>
-        </div>
-        <div className={styles.image}></div>
       </div>
     </header>
   );

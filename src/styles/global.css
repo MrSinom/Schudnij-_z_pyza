@@ -5,13 +5,15 @@
   box-sizing: border-box;
 }
 
+
 /* Body */
 body {
-  font-family: var(--font-body);
-  color: var(--color-dark);
-  background-color: var(--color-light);
-  line-height: 1.6;
+  background-image: url("../assets/backgorund.svg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
 
 /* Nagłówki */
 h1, h2, h3 {
